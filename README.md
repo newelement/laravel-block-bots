@@ -22,7 +22,7 @@ composer require newelement/laravel-block-bots
 
 #### Requirement
 
-- This package rely on heavly on Redis. To use it, make sure that Redis is configured and ready. (see [Laravel Redis Configuration](https://laravel.com/docs/5.6/redis#configuration))
+- This package rely on heavly on Redis. To use it, make sure that Redis is configured and ready. (see [Laravel Redis Configuration](https://laravel.com/docs/12.x/redis#configuration))
 
 #### Config
 
