@@ -2,15 +2,15 @@
 
 ## Introduction
 
-Laravel Block bots is a pacakge that block bad crawlers, people trying to scrape your website or high-usage users, but lets good and important crawlers such as GoogleBot and Bing pass-thu.
+Laravel Block Bots is a package that blocks bad crawlers, people trying to scrape your website or high-usage users, but lets good and important crawlers such as GoogleBot and Bing pass-through.
 
 ## Features
 
 - ULTRA fast, less than 1ms increase in each request.
 - Verify Crawlers using reverse DNS
 - Highly configurable
-- Redirect users to a page when they got blocked
-- Allow Logged users to always bypass blocks
+- Redirect users to a page when they get blocked
+- Allow logged-in users to always bypass blocks
 
 ## Install
 
@@ -22,7 +22,7 @@ composer require newelement/laravel-block-bots
 
 #### Requirement
 
-- This package rely on heavly on Redis. To use it, make sure that Redis is configured and ready. (see [Laravel Redis Configuration](https://laravel.com/docs/12.x/redis#configuration))
+- This package relies heavily on Redis. To use it, make sure that Redis is configured and ready. (see [Laravel Redis Configuration](https://laravel.com/docs/12.x/redis#configuration))
 
 #### Config
 
@@ -35,13 +35,14 @@ php artisan vendor:publish --provider="Newelement\LaravelBlockBots\BlockBotsServ
 Configure variables in your .env file:
 
 ```
-BLOCK_BOTS_ENABLED=true // Enables block bots
-BLOCK_BOTS_MODE=production // options: `production` (like a charm), `never` (bypass every route), `always` (blocks every routes)
-BLOCK_BOTS_USE_DEFAULT_ALLOWED_BOTS=true // if you want to use our preseted whitelist
-BLOCK_BOTS_WHITELIST_KEY=block_bot:whitelist // key for whitelist in Redis
-BLOCK_BOTS_FAKE_BOTS_KEY=block_bot:fake_bots // key for fake bots in Redis
-BLOCK_BOTS_PENDING_BOTS_KEY=block_bot:pending_bots // key for pending bots in Redis
-BLOCK_BOTS_LOG_ENABLED=true // Enables log
+BLOCK_BOTS_ENABLED=true
+BLOCK_BOTS_MODE=production
+#options: `production` (like a charm), `never` (bypass every route), `always` (blocks every routes)
+BLOCK_BOTS_USE_DEFAULT_ALLOWED_BOTS=true
+BLOCK_BOTS_WHITELIST_KEY=block_bot:whitelist
+BLOCK_BOTS_FAKE_BOTS_KEY=block_bot:fake_bots
+BLOCK_BOTS_PENDING_BOTS_KEY=block_bot:pending_bots
+BLOCK_BOTS_LOG_ENABLED=true
 
 ```
 
@@ -56,7 +57,7 @@ protected $routeMiddleware = [
     ];
 ```
 
-Than you can put in the desired groups. For exemple, lets set to the Wrb group:
+Than you can put in the desired groups. For example, let's set to the Web group:
 
 ```
 
