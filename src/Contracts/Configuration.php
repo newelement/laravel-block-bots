@@ -1,6 +1,6 @@
 <?php
 
-namespace Potelo\LaravelBlockBots\Contracts;
+namespace Newelement\LaravelBlockBots\Contracts;
 
 /**
  * Class Configuration

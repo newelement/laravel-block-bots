@@ -1,9 +1,9 @@
 <?php
 
-namespace Potelo\LaravelBlockBots\Abstracts;
+namespace Newelement\LaravelBlockBots\Abstracts;
 
-use Potelo\LaravelBlockBots\Contracts\Client;
-use Potelo\LaravelBlockBots\Contracts\Configuration;
+use Newelement\LaravelBlockBots\Contracts\Client;
+use Newelement\LaravelBlockBots\Contracts\Configuration;
 
 abstract class AbstractBlockBots
 {

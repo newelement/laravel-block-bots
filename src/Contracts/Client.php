@@ -1,11 +1,11 @@
 <?php
 
-namespace Potelo\LaravelBlockBots\Contracts;
+namespace Newelement\LaravelBlockBots\Contracts;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redis;
-use Potelo\LaravelBlockBots\Jobs\ProcessLogWithIpInfo;
+use Newelement\LaravelBlockBots\Jobs\ProcessLogWithIpInfo;
 
 class Client
 {
@@ -17,7 +17,7 @@ class Client
     public $url;
 
     /**
-     * @var \Potelo\LaravelBlockBots\Contracts\Configuration
+     * @var \Newelement\LaravelBlockBots\Contracts\Configuration
      */
     private $options;
 

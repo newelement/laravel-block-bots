@@ -1,10 +1,10 @@
 <?php
 
-namespace Potelo\LaravelBlockBots\Commands;
+namespace Newelement\LaravelBlockBots\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Redis;
-use Potelo\LaravelBlockBots\Contracts\Configuration;
+use Newelement\LaravelBlockBots\Contracts\Configuration;
 
 class ClearWhitelist extends Command
 {
@@ -23,7 +23,7 @@ class ClearWhitelist extends Command
     protected $description = 'Clear the White-list';
 
     /**
-     * @var \Potelo\LaravelBlockBots\Contracts\Configuration
+     * @var \Newelement\LaravelBlockBots\Contracts\Configuration
      */
     private $options;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Potelo\LaravelBlockBots\Tests\Unit;
+namespace Newelement\LaravelBlockBots\Tests\Unit;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Config;
-use Potelo\LaravelBlockBots\Tests\TestCase;
-use Potelo\LaravelBlockBots\Middleware\BlockBots;
-use Potelo\LaravelBlockBots\Jobs\CheckIfBotIsReal;
-use Potelo\LaravelBlockBots\Jobs\ProcessLogWithIpInfo;
+use Newelement\LaravelBlockBots\Tests\TestCase;
+use Newelement\LaravelBlockBots\Middleware\BlockBots;
+use Newelement\LaravelBlockBots\Jobs\CheckIfBotIsReal;
+use Newelement\LaravelBlockBots\Jobs\ProcessLogWithIpInfo;
 
 class BlockBotsMiddlewareTest extends TestCase
 {

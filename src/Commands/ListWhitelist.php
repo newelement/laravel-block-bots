@@ -1,10 +1,10 @@
 <?php
 
-namespace Potelo\LaravelBlockBots\Commands;
+namespace Newelement\LaravelBlockBots\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Redis;
-use Potelo\LaravelBlockBots\Contracts\Configuration;
+use Newelement\LaravelBlockBots\Contracts\Configuration;
 
 class ListWhitelist extends Command
 {
@@ -23,7 +23,7 @@ class ListWhitelist extends Command
     protected $description = 'Show the list of IPs that are Whitelisted';
 
     /**
-     * @var \Potelo\LaravelBlockBots\Contracts\Configuration
+     * @var \Newelement\LaravelBlockBots\Contracts\Configuration
      */
     private $options;
 

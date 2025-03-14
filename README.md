@@ -1,9 +1,5 @@
 # Laravel Block Bots
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Total Downloads][ico-downloads]][link-downloads]
-
 ## Introduction
 
 Laravel Block bots is a pacakge that block bad crawlers, people trying to scrape your website or high-usage users, but lets good and important crawlers such as GoogleBot and Bing pass-thu.
@@ -21,23 +17,19 @@ Laravel Block bots is a pacakge that block bad crawlers, people trying to scrape
 Via Composer
 
 ```bash
-composer require potelo/laravel-block-bots
+composer require newelement/laravel-block-bots
 ```
 
 #### Requirement
 
 - This package rely on heavly on Redis. To use it, make sure that Redis is configured and ready. (see [Laravel Redis Configuration](https://laravel.com/docs/5.6/redis#configuration))
 
-#### Before Laravel 5.5
-
-In Laravel 5.4. you'll manually need to register the `\Potelo\LaravelBlockBots\BlockBots::class` service provider in `config/app.php`.
-
 #### Config
 
 To adjust the library, you can publish the config file to your project using:
 
 ```
-php artisan vendor:publish --provider="Potelo\LaravelBlockBots\BlockBotsServiceProvider"
+php artisan vendor:publish --provider="Newelement\LaravelBlockBots\BlockBotsServiceProvider"
 ```
 
 Configure variables in your .env file:
@@ -60,7 +52,7 @@ It's simple. Go to `Kernel.php` and add to the `$routeMiddleware` block as :
 ```
 protected $routeMiddleware = [
         ...
-        'block' => \Potelo\LaravelBlockBots\Middleware\BlockBots::class,
+        'block' => \Newelement\LaravelBlockBots\Middleware\BlockBots::class,
     ];
 ```
 
@@ -91,15 +83,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT
 
 ## Credits
 
-- [Potelo][link-author]
+Original package by [Newelement][link-author]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/potelo/laravel-block-bots.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/potelo/laravel-block-bots.svg?style=flat-square
-[link-packagist]: https://packagist.org/packages/potelo/laravel-block-bots
-[link-downloads]: https://packagist.org/packages/potelo/laravel-block-bots
-[link-author]: https://github.com/potelo

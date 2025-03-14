@@ -1,6 +1,6 @@
 <?php
 
-namespace Potelo\LaravelBlockBots\Tests;
+namespace Newelement\LaravelBlockBots\Tests;
 
 use Illuminate\Support\Facades\Redis;
 
@@ -19,7 +19,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app): array
     {
         return [
-            \Potelo\LaravelBlockBots\BlockBotsServiceProvider::class,
+            \Newelement\LaravelBlockBots\BlockBotsServiceProvider::class,
         ];
     }
 }

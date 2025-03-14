@@ -1,10 +1,10 @@
 <?php
 
-namespace Potelo\LaravelBlockBots;
+namespace Newelement\LaravelBlockBots;
 
 use Illuminate\Support\ServiceProvider;
-use Potelo\LaravelBlockBots\Commands\ListWhitelist;
-use Potelo\LaravelBlockBots\Commands\ClearWhitelist;
+use Newelement\LaravelBlockBots\Commands\ListWhitelist;
+use Newelement\LaravelBlockBots\Commands\ClearWhitelist;
 
 class BlockBotsServiceProvider extends ServiceProvider
 {
