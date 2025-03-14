@@ -75,7 +75,7 @@ Where:
 
 ## Credits
 
-Original package by [Newelement][link-author]
+Original package by [Potelo](https://github.com/potelo)
 
 ## License
 
