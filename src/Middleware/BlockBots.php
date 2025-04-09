@@ -11,10 +11,8 @@ use Newelement\LaravelBlockBots\Events\UserBlockedEvent;
 use Newelement\LaravelBlockBots\Jobs\ProcessLogWithIpInfo;
 use Newelement\LaravelBlockBots\Abstracts\AbstractBlockBots;
 
-
 class BlockBots extends AbstractBlockBots
 {
-
     /**
      * Executes the middleware
      *
@@ -22,12 +20,14 @@ class BlockBots extends AbstractBlockBots
      * @param Closure $next
      * @param int $limit
      * @param string $frequency
+     * @param callable $userFunc
      * @return mixed
      */
-    public function handle($request, Closure $next, $limit = 100, $frequency = 'daily')
+    public function handle($request, Closure $next, $limit = 100, $frequency = 'daily', $userFunc = null)
     {
         $this->setUp($request, $limit, $frequency);
-        $this->beforeHandle();
+
+        $this->beforeHandle($userFunc);
 
         if (!$this->options->enabled) {
             return $next($request);

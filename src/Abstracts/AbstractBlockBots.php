@@ -29,8 +29,13 @@ abstract class AbstractBlockBots
         $this->setClient();
     }
 
-    protected function beforeHandle()
+    protected function beforeHandle($userFunc = null)
     {
+        $userFiltered = $userFunc ? call_user_func($userFunc, $this->request) : false;
+
+        if ($userFiltered) {
+            $this->options->enabled = false;
+        }
     }
 
     protected function setRequest($request)
